@@ -55,12 +55,15 @@
 # Or, try disconnecting USB to power down and then reconnecting before running avrdude.
 #
 
+# Verbose
+V=1
+
 # This defines the board to compile for (see boards.h for your board's ID)
-HARDWARE_MOTHERBOARD ?= 11
+HARDWARE_MOTHERBOARD ?= 47
 
 # Arduino source install directory, and version number
 # On most linuxes this will be /usr/share/arduino
-ARDUINO_INSTALL_DIR  ?= ${HOME}/Arduino
+ARDUINO_INSTALL_DIR  ?= ${HOME}/opt/arduino
 ARDUINO_VERSION      ?= 106
 
 # You can optionally set a path to the avr-gcc tools. Requires a trailing slash. (ex: /usr/local/avr-gcc/bin)
@@ -237,6 +240,9 @@ HARDWARE_VARIANT ?= arduino
 MCU              ?= atmega2560
 
 endif
+
+HARDWARE_VARIANT ?= arduino
+MCU ?= atmega2560
 
 # Be sure to regenerate speed_lookuptable.h with create_speed_lookuptable.py
 # if you are setting this to something other than 16MHz
@@ -440,8 +446,8 @@ endif
 
 	# Display size of file.
 HEXSIZE = $(SIZE) --target=$(FORMAT) $(BUILD_DIR)/$(TARGET).hex
-ELFSIZE = $(SIZE) --mcu=$(MCU) -C $(BUILD_DIR)/$(TARGET).elf; \
-          $(SIZE)  $(BUILD_DIR)/$(TARGET).elf
+ELFSIZE = $(SIZE) $(BUILD_DIR)/$(TARGET).elf
+
 sizebefore:
 	$P if [ -f $(BUILD_DIR)/$(TARGET).elf ]; then echo; echo $(MSG_SIZE_BEFORE); $(HEXSIZE); echo; fi
 
