@@ -488,7 +488,7 @@
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 4000, 500 }
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 1600, 96.1261 }  // Custom for TEVO Tarantula
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 1600, 417 }  // Custom for TEVO Tarantula. + Akshaal Changes for Titan extruder ()
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -496,7 +496,7 @@
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
 //#define DEFAULT_MAX_FEEDRATE          { 300, 300, 5, 25 }
-#define DEFAULT_MAX_FEEDRATE          { 300, 300, 7, 50 }    // Custom for TEVO Tarantula
+#define DEFAULT_MAX_FEEDRATE          { 300, 300, 7, 60 }    // Custom for TEVO Tarantula
 
 /**
  * Default Max Acceleration (change/s) change = mm/s
@@ -505,7 +505,7 @@
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
 //#define DEFAULT_MAX_ACCELERATION      { 3000, 3000, 100, 10000 }
-#define DEFAULT_MAX_ACCELERATION      { 500,  500, 50, 500 }    // Custom for TEVO Tarantula
+#define DEFAULT_MAX_ACCELERATION      { 1000, 1000, 100, 10000 }    // Custom for TEVO Tarantula
 
 /**
  * Default Acceleration (change/s) change = mm/s
@@ -529,13 +529,13 @@
  * value set here, it may happen instantaneously.
  */
 //#define DEFAULT_XJERK                 20.0
-#define DEFAULT_XJERK                 4.0    // Custom for TEVO Tarantula
+#define DEFAULT_XJERK                 8.0    // Custom for TEVO Tarantula
 //#define DEFAULT_YJERK                 20.0
-#define DEFAULT_YJERK                 7.0    // Custom for TEVO Tarantula
+#define DEFAULT_YJERK                 15.0    // Custom for TEVO Tarantula
 //#define DEFAULT_ZJERK                  0.4
-#define DEFAULT_ZJERK                  0.2   // Custom for Tevo Tarantula
+#define DEFAULT_ZJERK                  0.4   // Custom for Tevo Tarantula
 //#define DEFAULT_EJERK                  5.0
-#define DEFAULT_EJERK                  2.5   // Custom for Tevo Tarantula
+#define DEFAULT_EJERK                  5   // Custom for Tevo Tarantula
 
 
 //===========================================================================
@@ -723,7 +723,7 @@
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR false
+#define INVERT_E0_DIR true     // Change by Akshaal. Custom for Titan
 #define INVERT_E1_DIR false
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
