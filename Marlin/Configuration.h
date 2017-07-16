@@ -521,7 +521,7 @@
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 4000, 500 }
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 1600, 417 }  // Custom for TEVO Tarantula. + Akshaal Changes for Titan extruder ()
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 1600, 431.67 }  // Custom for TEVO Tarantula. + Akshaal Changes for Titan extruder ()
 
 /**
  * Default Max Feed Rate (mm/s)
