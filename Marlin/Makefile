@@ -302,7 +302,7 @@ CXXSRC = WMath.cpp WString.cpp Print.cpp Marlin_main.cpp \
 	temperature.cpp cardreader.cpp configuration_store.cpp \
 	watchdog.cpp SPI.cpp servo.cpp Tone.cpp ultralcd.cpp digipot_mcp4451.cpp \
 	dac_mcp4728.cpp vector_3.cpp qr_solve.cpp endstops.cpp stopwatch.cpp utility.cpp \
-	printcounter.cpp nozzle.cpp serial.cpp gcode.cpp
+	printcounter.cpp nozzle.cpp serial.cpp gcode.cpp ubl.cpp ubl_G29.cpp ubl_motion.cpp G26_Mesh_Validation_Tool.cpp least_squares_fit.cpp hex_print_routines.cpp
 ifeq ($(LIQUID_TWI2), 0)
 CXXSRC += LiquidCrystal.cpp
 else
