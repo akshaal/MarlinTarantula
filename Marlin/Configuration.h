@@ -891,13 +891,13 @@
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
   // Set the boundaries for probing (where the probe can reach).
-  #define LEFT_PROBE_BED_POSITION 5
-  #define RIGHT_PROBE_BED_POSITION 195
+  #define LEFT_PROBE_BED_POSITION 10 // CHANGED BY AKSHAAL
+  #define RIGHT_PROBE_BED_POSITION 190 // CHANGED BY AKSHAAL
   #define FRONT_PROBE_BED_POSITION 85
   #define BACK_PROBE_BED_POSITION 220 // CHANGED BY AKSHAAL
 
   // The Z probe minimum outer margin (to validate G29 parameters).
-  #define MIN_PROBE_EDGE 5
+  #define MIN_PROBE_EDGE 10
 
   // Probe along the Y axis, advancing X after each column
   //#define PROBE_Y_FIRST
@@ -906,7 +906,7 @@
 
     // Beyond the probed grid, continue the implied tilt?
     // Default is to maintain the height of the nearest edge.
-    //#define EXTRAPOLATE_BEYOND_GRID
+    #define EXTRAPOLATE_BEYOND_GRID
 
     //
     // Experimental Subdivision of the grid by Catmull-Rom method.
