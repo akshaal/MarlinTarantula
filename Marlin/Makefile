@@ -86,11 +86,11 @@ LIQUID_TWI2        ?= 0
 WIRE               ?= 0
 
 # this defines if U8GLIB is needed (may require RELOC_WORKAROUND)
-U8GLIB             ?= 1
+U8GLIB             ?= 0
 
 # this defines whether to add a workaround for the avr-gcc relocation bug
 #	  https://www.stix.id.au/wiki/AVR_relocation_truncations_workaround
-RELOC_WORKAROUND   ?= 1
+RELOC_WORKAROUND   ?= 0
 
 ############################################################################
 # Below here nothing should be changed...
@@ -315,9 +315,9 @@ CXXSRC = WMath.cpp WString.cpp Print.cpp Marlin_main.cpp \
 	SdFile.cpp SdVolume.cpp planner.cpp stepper.cpp \
 	temperature.cpp cardreader.cpp configuration_store.cpp \
 	watchdog.cpp SPI.cpp servo.cpp Tone.cpp ultralcd.cpp digipot_mcp4451.cpp \
-	dac_mcp4728.cpp vector_3.cpp qr_solve.cpp endstops.cpp stopwatch.cpp utility.cpp \
+	dac_mcp4728.cpp vector_3.cpp endstops.cpp stopwatch.cpp utility.cpp \
 	printcounter.cpp nozzle.cpp serial.cpp gcode.cpp ubl.cpp ubl_G29.cpp ubl_motion.cpp \
-	G26_Mesh_Validation_Tool.cpp least_squares_fit.cpp hex_print_routines.cpp Max7219_Debug_LEDs.cpp
+	G26_Mesh_Validation_Tool.cpp least_squares_fit.cpp hex_print_routines.cpp
 ifeq ($(NEOPIXEL), 1)
 CXXSRC += Adafruit_NeoPixel.cpp
 endif
