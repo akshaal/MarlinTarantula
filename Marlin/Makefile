@@ -321,7 +321,6 @@ CXXSRC = WMath.cpp WString.cpp Print.cpp Marlin_main.cpp \
 ifeq ($(NEOPIXEL), 1)
 CXXSRC += Adafruit_NeoPixel.cpp
 endif
->>>>>>> marlin/1.1.x
 ifeq ($(LIQUID_TWI2), 0)
 CXXSRC += LiquidCrystal.cpp
 else
